@@ -1,8 +1,13 @@
 import sys
 from pathlib import Path
 
-# Add project root to sys.path to allow absolute imports when running main.py directly
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+# Add project root to sys.path only in dev mode.
+# When frozen by PyInstaller (sys.frozen=True) the bundled PYZ archive already
+# contains all src.* modules — inserting the source path would cause the exe to
+# load .py files from disk (the original project folder) instead of the bundle,
+# which breaks the sys.frozen path resolution in config.py.
+if not getattr(sys, 'frozen', False):
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 import customtkinter
 from src.config import APPEARANCE_MODE, COLOR_THEME
