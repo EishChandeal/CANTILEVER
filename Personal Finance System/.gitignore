@@ -1,0 +1,22 @@
+# Data & DB
+data/
+*.db
+*.sqlite
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+
+# Build & Packaging
+dist/
+build/
+*.spec
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp

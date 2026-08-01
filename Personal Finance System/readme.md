@@ -1,12 +1,19 @@
 # Personal Finance System
 
-a Personal Finance Management
-System that allows users to track their income,
-expenses, and savings.
+A modern, easy-to-use desktop application for tracking personal income, expenses, savings goals, and budgets. Built with Python, CustomTkinter, SQLite, and Matplotlib.
 
-This project will involve
-creating a user-friendly interface and handling
-data storage.
+## Features
+- Income & Expense tracking with categories
+- Dashboard with summary cards & chart visualizations
+- Budget manager with spending progress & alerts
+- Savings goals tracker
+- Visual reports (trend lines, expense breakdown, monthly comparisons) with CSV/PNG export
+- Configurable settings & dark theme support
 
-Technologies: Python, SQlite, Matplotlib, Tkinter
-for GUI (optional)
+## Quick Start
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+python src/main.py
+```
