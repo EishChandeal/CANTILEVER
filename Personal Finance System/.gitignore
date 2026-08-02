@@ -11,12 +11,20 @@ __pycache__/
 env/
 venv/
 
-# Build & Packaging
+# Build & Packaging (keep the spec, exclude build artifacts)
 dist/
 build/
 *.spec
+
+# Tests
+.pytest_cache/
 
 # IDE / Editor
 .vscode/
 .idea/
 *.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
